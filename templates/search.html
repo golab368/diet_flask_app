@@ -1,0 +1,105 @@
+{% extends "index.html" %}
+{% block content %}
+
+<br><br>
+<div class="row justify-content-center">
+
+  <div class="col-md-6">
+    <div class="card card-body h-100 border border-2">
+      <form method="POST">
+
+        <div class="row">
+
+          <div class="col">
+            <p>What would you like to eat ?</p>
+            <input type="text" class="form-control" id="query" name="query" placeholder="For exaple pasta"
+              aria-label="First name">
+          </div>
+
+          <div class="col">
+            <p>Choose diet type :</p>
+            <select class="form-select form-select" name="diet" aria-label=".form-select-sm example">
+              <option selected>Any</option>
+
+              <option value="Gluten Free">Gluten Free</option>
+              <option value="Ketogenic">Ketogenic</option>
+              <option value="Vegetarian">Vegetarian</option>
+              <option value="Lacto-Vegetarian">Lacto-Vegetarian</option>
+              <option value="Ovo-Vegetarian">Ovo-Vegetarian</option>
+              <option value="Vegan">Vegan</option>
+              <option value="Paleo">Paleo</option>
+              <option value="Primal">Primal</option>
+              <option value="Whole30">Whole30</option>
+            </select>
+          </div>
+
+
+        </div>
+
+        <br>
+        <div class="row">
+          <div class="col">
+            <input type="number" class="form-control" placeholder="minCarbs" name="minCarbs" aria-label="First name">
+          </div>
+
+          <div class="col">
+            <input type="number" class="form-control" placeholder="maxCarbs" name="maxCarbs" aria-label="First name">
+          </div>
+        </div>
+
+        <br>
+        <div class="row">
+          <div class="col">
+            <input type="number" class="form-control" placeholder="minProtein" name="minProtein" aria-label="Last name">
+
+          </div>
+
+          <div class="col">
+            <input type="number" class="form-control" placeholder="maxProtein" name="maxProtein" aria-label="Last name">
+          </div>
+        </div>
+
+        <br>
+        <div class="row">
+          <div class="col">
+            <input type="number" class="form-control" placeholder="minCalories" name="minCalories"
+              aria-label="Last name">
+
+          </div>
+
+          <div class="col">
+            <input type="number" class="form-control" placeholder="maxCalories" name="maxCalories"
+              aria-label="Last name">
+          </div>
+        </div>
+
+
+        <br>
+        <div class="row">
+          <div class="col">
+            <input type="number" class="form-control" placeholder="minFat" name="minFat" aria-label="Last name">
+          </div>
+          <div class="col">
+            <input type="number" class="form-control" placeholder="maxFat" name="maxFat" aria-label="Last name">
+          </div>
+        </div>
+
+        <br>
+        <div class="row">
+          <div class="col">
+            <input type="number" class="form-control" placeholder="maxReadyTime" name="maxReadyTime"
+              aria-label="Last name">
+          </div>
+          <div class="col">
+
+          </div>
+        </div>
+        <br>
+        <input type="submit" value="Submit" class="btn btn-primary">
+      </form>
+    </div>
+
+  </div>
+</div>
+
+{% endblock %}

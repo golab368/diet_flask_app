@@ -1,0 +1,41 @@
+{% extends "index.html" %}
+
+{% block content %}
+
+<br>
+<br>
+
+<p class="text-center">Nutritional Information</p>
+<div class="d-flex align-items-center justify-content-center">
+  {% for key,value in meal_plan_for_day['nutrients'].items() %}
+  <a type="button" class="btn btn-outline-primary">{{key}} : {{value}} </a>
+  {% endfor %}
+</div>
+
+<br>
+<br>
+
+<div class="row">
+
+  {% for i in meal_plan_for_day['meals'] %}
+
+  <div class="col-4">
+    <div class="card border border-primary">
+
+      <img class="rounded-3" src="{{spoon_image_url(i['id'])}}">
+      <h4 class="text-center">{{i['title']}}</h4>
+      <p class="text-center">Ready in {{i['readyInMinutes']}} minutes</p>
+      <p class="text-center">Servings {{i['servings']}}</p>
+
+      <div class="card-footer text-center">
+        <a type="button" class="btn btn-outline-primary" href="{{i['sourceUrl']}}" target="_blank">Go to recipe</a>
+      </div>
+
+    </div>
+  </div>
+
+  {% endfor %}
+  
+</div>
+
+{% endblock %}

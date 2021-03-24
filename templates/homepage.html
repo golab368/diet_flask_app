@@ -1,0 +1,70 @@
+{% extends "index.html" %}
+
+{% block content %}
+
+<br>
+<br>
+<div class="container">
+  <div class="row">
+    <div class="col-lg-4">
+      <img class="rounded-circle border border-primary" src="static\images\burger.jpg" alt="Generic placeholder image"
+        width="150" height="150">
+      <h2>Dish searching</h2>
+      <p>Find something to eat, search by calories and macro ingredients.</p>
+      <p><a type="button" class="btn btn-outline-primary" href="/search" role="button">Search
+          &raquo;</a></p>
+    </div><!-- /.col-lg-4 -->
+    <div class="col-lg-4">
+      <img class="rounded-circle border border-primary" src="static\images\pizza.JPG" alt="Generic placeholder image"
+        width="140" height="140">
+      <h2>Meal plan for day or week</h2>
+      <p>Choose a daily or weekly plan.</p>
+      <p>
+      <form method="POST">
+        <select name="selection" class="form-select form-select-sm" aria-label=".form-select-sm example">
+          <option value="day">for day</option>
+          <option value="week">for week</option>
+        </select>
+        <br>
+        <input type="submit" value="Search &raquo;" class="btn btn-outline-primary" role="button">
+
+      </form>
+      </p>
+
+    </div><!-- /.col-lg-4 -->
+    <div class="col-lg-4">
+      <img class="rounded-circle border border-primary" src="static\images\ramen.JPG" alt="Generic placeholder image"
+        width="140" height="140">
+      <h2>Random dish</h2>
+      <p>Maybe something random?</p>
+
+      <p><a type="button" class="btn btn-outline-primary" href="/random" role="button">Search &raquo;</a></p>
+
+    </div>
+  </div>
+
+  <br>
+  <br>
+  <br>
+  <hr class="featurette-divider">
+
+  <div class="row featurette">
+    <div class="col-md-7">
+      <h2 class="featurette-heading">Flask food API app <span class="text-muted">Combining passion for cooking and
+          programming</span></h2>
+      <p class="lead">Hello, in this project I focused on API queries more on the <a href="/about" target="_blank">about
+          project</a>, all photos on the homepage are made by me more on my instagram <a
+          href="https://www.instagram.com/bread_beking/" target="_blank"><img class="social"
+            src="static\images\instagram.png"></a></p>
+    </div>
+
+    <div class="col-md-5">
+      <img class="rounded-circle border border-primary" src="static\images\sushi2.jpg" width="160" height="160"
+        alt="Generic placeholder image">
+    </div>
+  </div>
+
+  <hr class="featurette-divider">
+
+</div>
+{% endblock %}

@@ -1,0 +1,31 @@
+{% extends "index.html" %}
+{% block content %}
+<br>
+<br>
+<div class="row">
+
+{% for i1 in result1["results"]%}
+{% set outer_loop = loop %}
+{% for i2 in result2 %}
+{% if outer_loop.index0 == loop.index0 %} 
+    <div class="col-4">
+        <div class="card h-100">
+            <img class="card-img-top rounded-3" src="{{spoon_image_url(i1['id'])}}">
+            <div class="card-body">
+            <h4 class="card-title">{{i1['title']}}</h4>
+            <p class="card-text">Ready in {{i2['readyInMinutes']}} minutes</p>
+            <p class="card-text">{{i2['aggregateLikes']}} likes</p>
+        </div>
+
+        <div class="card-footer text-center">
+            <a href="{{i2['sourceUrl']}}" target="_blank" class="btn btn-primary">Go to recipe</a>
+        </div>
+    </div>
+</div>
+
+{% endif %} 
+{% endfor %}
+{% endfor %}
+</div>
+
+{% endblock %}
