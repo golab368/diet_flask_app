@@ -8,9 +8,9 @@
 {% set outer_loop = loop %}
 {% for i2 in result2 %}
 {% if outer_loop.index0 == loop.index0 %} 
-    <div class="col-4">
-        <div class="card h-100">
-            <img class="card-img-top rounded-3" src="{{spoon_image_url(i1['id'])}}">
+    <div class="col-md-4 ">
+        <div class="card h-100 border border-info">
+            <img class="rounded-3" src="{{spoon_image_url(i1['id'])}}">
             <div class="card-body">
             <h4 class="card-title">{{i1['title']}}</h4>
             <p class="card-text">Ready in {{i2['readyInMinutes']}} minutes</p>

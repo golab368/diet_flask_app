@@ -8,7 +8,9 @@
 <p class="text-center">Nutritional Information</p>
 <div class="d-flex align-items-center justify-content-center">
   {% for key,value in meal_plan_for_day['nutrients'].items() %}
-  <a type="button" class="btn btn-outline-primary">{{key}} : {{value}} </a>
+  <button type="button" class="btn btn-primary">
+    {{key}} <span class="badge badge-light">{{value}} </span>
+  </button>
   {% endfor %}
 </div>
 
@@ -19,8 +21,8 @@
 
   {% for i in meal_plan_for_day['meals'] %}
 
-  <div class="col-4">
-    <div class="card border border-primary">
+  <div class="col-md-4 ">
+    <div class="card h-100 border border-info">
 
       <img class="rounded-3" src="{{spoon_image_url(i['id'])}}">
       <h4 class="text-center">{{i['title']}}</h4>
